@@ -26,7 +26,7 @@ except IOError:
 setup(
     name='boto_rsync_gzip',
     version='0.8.1',
-    author='Seth Davis',
+    author='Seth Davis, Ravi Kotecha',
     author_email='kotecha.ravi@gmail.com',
     description="An rsync-like wrapper for boto's S3 and Google Storage " + \
                 "interfaces. Fork of boto_rsync which also gzips javascript/css files.",
