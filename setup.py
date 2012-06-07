@@ -4,7 +4,7 @@ try:
 except ImportError:
     from setuptools import setup
 
-install_requires = ['boto>=2.2.1']
+install_requires = ['boto>=2.4.1']
 
 if sys.version_info[0] >= 3 or sys.version_info[:2] < (2, 5):
     raise RuntimeError('Requires Python 2.5 or above and does not support '
@@ -24,15 +24,15 @@ except IOError:
     CHANGES = ''
 
 setup(
-    name='boto_rsync',
+    name='boto_rsync_gzip',
     version='0.8.1',
     author='Seth Davis',
-    author_email='seth@curiasolutions.com',
+    author_email='kotecha.ravi@gmail.com',
     description="An rsync-like wrapper for boto's S3 and Google Storage " + \
-                "interfaces.",
+                "interfaces. Fork of boto_rsync which also gzips javascript/css files.",
     long_description=README + '\n\n' + CHANGES,
-    url='http://github.com/seedifferently/boto_rsync',
-    keywords='boto amazon aws s3 gs google storage cloud sync rsync',
+    url='http://github.com/r4vi/boto_rsync',
+    keywords='boto amazon aws s3 gs google storage cloud sync rsync gzip css javascript',
     packages=[],
     install_requires=install_requires,
     scripts=['bin/boto-rsync'],
